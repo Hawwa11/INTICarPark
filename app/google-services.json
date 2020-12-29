@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "153299917449",
+    "firebase_url": "https://inti-car-park-e23d3.firebaseio.com",
+    "project_id": "inti-car-park-e23d3",
+    "storage_bucket": "inti-car-park-e23d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153299917449:android:60c631b2a38123f1a28458",
+        "android_client_info": {
+          "package_name": "com.example.android.inticarpark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153299917449-h8jc8jjccrmjnjffpf8n0kvim7mcolen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrBWUco7qj55-372r3Y4yVXwXFFh9bo9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153299917449-h8jc8jjccrmjnjffpf8n0kvim7mcolen.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

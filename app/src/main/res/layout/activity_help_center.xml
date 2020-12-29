@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    tools:context=".HelpCenter">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFEBEB">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fadeScrollbars="false"
+            android:maxWidth="1dp"
+            android:theme="?attr/actionBarTheme"
+            app:buttonGravity="top|center_vertical"
+            app:contentInsetStartWithNavigation="20dp"
+            app:layout_constrainedHeight="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxButtonHeight="8dp"
+            app:navigationContentDescription="" />
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="@+id/toolbar"
+            app:srcCompat="@drawable/menu" />
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="36dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="32dp"
+            android:onClick="setting"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_settings_black_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="HELP CENTER"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintStart_toEndOf="@+id/menu"
+            app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/faq"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+
+            android:text="FAQ"
+            android:textColor="#707070"
+
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/q1"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/q1"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:onClick="q1"
+            android:text="How to reserve a parking?"
+            android:textAllCaps="false"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/q2"
+            app:layout_constraintTop_toBottomOf="@+id/faq" />
+
+        <TextView
+            android:id="@+id/q2"
+
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:onClick="q2"
+            android:text="Can I make more than one reservation?"
+            android:textAllCaps="false"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/q3"
+            app:layout_constraintTop_toBottomOf="@+id/q1" />
+
+
+        <TextView
+            android:id="@+id/q3"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:onClick="q3"
+            android:text="What if someone took my parking?"
+            android:textAllCaps="false"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q2" />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="  Click the button below to view and download the User Manual pdf file"
+            android:textAllCaps="false"
+            android:textColor="#707070"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q3" />
+
+    <TextView
+        android:id="@+id/downloadpdf"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:onClick="download"
+        android:text="First time User Guide"
+        android:background="#ffff"
+        android:textAllCaps="true"
+        android:textColor="#707070"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview" />
+
+        <Button
+            android:id="@+id/btnfeedback"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="#ffff"
+            android:text="Feedback"
+            android:textAllCaps="true"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/downloadpdf" />
+
+        <TextView
+            android:id="@+id/Contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="33dp"
+            android:text="Contact us at inti@newiniti.edu.my for futher enquiries."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/downloadpdf" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:background="#FFEBEB"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
